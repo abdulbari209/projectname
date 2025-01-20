@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <style>
+        * {
+            margin: 0%;
+            padding: 0%;
+
+        }
+
+        .navbar-brand {
+            display: flex;
+            align-items: center;
+            text-align: center;
+        }
+
+        .navbar-brand i {
+            margin-right: 10px;
+        }
+
+        nav {
+            background-color: rgb(208, 207, 207);
+            padding: 15px;
+            text-align: center;
+            height: 60px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .nav li {
+            margin: 0 15px;
+            text-align: center;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #000;
+            padding: 70px;
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            padding: 7px;
+            padding-top: 8px;
+        }
+
+        .hamburger div {
+            width: 25px;
+            height: 4px;
+            background-color: rgb(2, 2, 2);
+            margin: 4px 0;
+        }
+
+        @media (max-width: 576px) {
+            nav {
+                background-color: white;
+            }
+
+            nav ul {
+                display: none;
+                flex-direction: column;
+            }
+
+            nav ul.active {
+                display: flex;
+            }
+
+            nav li {
+                margin: 10px 0;
+            }
+
+            .hamburger {
+                display: flex;
+                margin-right: 20px;
+            }
+        }
+
+        .intro {
+            background-color: rgb(243, 237, 237);
+        }
+
+        .intro h3 {
+            text-align: left;
+            margin: 20px;
+            color: #000;
+        }
+
+        .intro p {
+            color: rgb(93, 89, 89);
+            text-align: left;
+            margin: 20px;
+        }
+
+
+
+        .intro h1 {
+            margin: 20px;
+            text-align: left;
+        }
+
+        .intro p {
+            text-align: left;
+        }
+
+        .link {
+            text-align: center;
+            background-color: darkgrey;
+            height: 40px;
+            margin: 0%;
+            margin-bottom: 0%;
+        }
+
+        .link p {
+            display: inline;
+            color: red;
+        }
+
+        #form {
+            background-image: url(work.avif);
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        } */
+
+        form {
+            text-align: left;
+            background-color: rgb(254, 254, 254);
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        input[type="submit"],
+        input[type="reset"] {
+            padding: 10px 20px;
+            margin: 10px 5px 0 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        input[type="reset"] {
+            background-color: #f44336;
+            color: white;
+        }
+    </style>
+
+</head>
+
+<body>
+    <nav class="navbar bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand">
+                <i class="fa-solid fa-truck-fast"></i>
+                WebPage
+            </a>
+            <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+        </div>
+
+    </nav>
+    <nav>
+        <div class="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <ul>
+            <li><a href="#"><i class="fa-solid fa-house">HOME</i></a></li>
+            <li><a href="#h1"><i class="fa-solid fa-address-card">ABOUT</i></a></li>
+            <li><a href="#services"><i class="fa-solid fa-bell-concierge">SERVICE</i></a></li>
+            <li><a href="#form"><i class="fa-solid fa-address-book">CONTACT</i></a></li>
+        </ul>
+    </nav>
+    <div id="carouselExampleIndicators" class="carousel slide">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="work1.avif" class="d-block w-100" alt="..." height="600px" width="100%">
+            </div>
+            <div class="carousel-item">
+                <img src="work.avif" class="d-block w-100" alt="..." height="600px" width="100%">
+            </div>
+            <div class="carousel-item">
+                <img src="work2.avif" class="d-block w-100" alt="..." height="600px" width="100%">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <div class="intro">
+        <h1>What is a construction site?</h1>
+        <p>A construction site is an area or piece of land where construction work is taking place.
+            <br>
+            Sometimes construction sites are referred to as ‘building sites’. This usually implies that buildings or
+            houses
+            are being constructed, whereas ‘construction site’ covers a wider scope of work.
+            This could refer to anything from a house extension to a landscaping project, road or bridge construction or
+            a huge engineering project, such
+            as the Crossrail development or the creation of a new power station.
+        </p>
+
+        <hr>
+
+        <h3>Construction sites.</h3>
+        <p>Land is generally classed as a ‘construction site’ when it’s handed over to contractors to begin work. Across
+            a
+            construction site, multiple activities often take place at different times, under the same plan.</p>
+        <hr>
+        <h3>Movement of machinery and materials. </h3>
+        <p>Construction sites are busy places, where heavy machinery is often used to move materials or lift loads.
+            Traffic plans and barriers separating plant operations from other important works are key to site safety.
+        </p>
+        <hr>
+        <h3>Trip hazards.</h3>
+        <p>Uneven ground can present the risk of trips, slips and falls during construction works. Materials left lying
+            around can create a dangerous obstacle course, so equipment should be monitored and safe zones cordoned off
+            to
+            minimise hazards.</p>
+        <hr>
+        <h3>Harmful materials and substances.</h3>
+        <p>Asbestos and lead paint can be harmful to construction workers, as can chemicals, paints and the fumes
+            created
+            by these. Asbestos needs to be removed and disposed of in a safe way. Appropriate PPE should be worn to
+            prevent
+            dust and toxic substances from affecting skin, eyes and airways.</p>
+        <hr>
+        <h3>Working at height.</h3>
+        <p>Working at height is often part and parcel of building construction. Falling tools and debris can also
+            increase
+            risks. All staff on site should be provided with training to prevent accidents, and scaffolding and towers
+            need
+            to be made secure.</p>
+        <hr>
+        <h3>Manual handling and physical strain.</h3>
+        <p>Training on lifting and moving heavy items, with or without mechanical lifting tools, will help to minimise
+            accidents that arise from poor manual handling. To reduce physical strain resulting from the use of
+            vibrating
+            power tools and groundworking equipment, safety equipment should be worn, tools routinely maintained, and
+            regular breaks taken.</p>
+    </div>
+    <h1 id="h1">ABOUT.</h1>
+    <h3>Frequently asked!? </h3>
+    <div class="more">
+        <img src="jerry-smith-quote-1.webp" alt="" height="700px" width="100%">
+        <h2>What's a royalty-free license?</h2>
+        <p>Royalty-free licenses let you pay once to use copyrighted images and video clips in personal and commercial
+            projects on an ongoing basis without requiring additional payments each time you use that content. It's a
+            win-win, and it's why everything on iStock is only available royalty-free — including all 30-34 Years images
+            and footage.</p>
+        <img src="tim-level-johnson-quote-1.webp" alt="" height="700px" width="100%">
+        <h2>What kinds of royalty-free files are available on iStock?</h2>
+        <p>Royalty-free licenses are the best option for anyone who needs to use stock images commercially, which is why
+            every file on iStock — whether it’s a photo, illustration or video clip — is only available royalty-free.
+        </p>
+        <h2>How can you use royalty-free images and video clips?</h2>
+        <p>From social media ads to billboards, PowerPoint presentations to feature films, you're free to modify, resize
+            and customize every asset on iStock — including all Construction Industry images and footage — to fit your
+            projects. With the exception of "Editorial use only" photos (which can only be used in editorial projects
+            and
+            can't be modified), the possibilities are limitless.</p>
+
+    </div>
+    <div class="link">
+        <h3>Learn more about <p>royalty-free images</p> or view <p>FAQs related to stock photos</p>.</h3>
+    </div>
+    <h1 id="services">OUR WORK:</h1>
+    <br>
+    <div class="container text-center">
+        <div class="row">
+            <div class="col">
+                <img src="a1.jpg" alt="" height="500px" width="400px">
+                <h2> Description</h2>
+                <p>Carpenter building wooden frame house near the forest. Man holding large plank, on his shoulder,
+                    dressed in
+                    work clothes and helmet. Concept of modern, sustainable construction.</p>
+
+
+            </div>
+            <div class="col-6">
+                <img src="a2.jpg" alt="" height="500px" width="400px">
+                <h2> Description</h2>
+                <p>Carpenter building wooden frame house near the forest. Man holding large plank, on his shoulder,
+                    dressed in
+                    work clothes and helmet. Concept of modern, sustainable construction.</p>
+
+            </div>
+            <div class="col">
+                <img src="a3.jpg" alt="" height="500px" width="400px">
+                <h2> Description</h2>
+                <p>Carpenter building wooden frame house near the forest. Man holding large plank, on his shoulder,
+                    dressed in
+                    work clothes and helmet. Concept of modern, sustainable construction.</p>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <img src="a4.jpg" alt="" height="500px" width="400px">
+                <h2> Description</h2>
+                <p>Carpenter building wooden frame house near the forest. Man holding large plank, on his shoulder,
+                    dressed in
+                    work clothes and helmet. Concept of modern, sustainable construction.</p>
+
+            </div>
+            <div class="col-5">
+                <img src="a5.jpg" alt="" height="500px" width="400px">
+                <h2> Description</h2>
+                <p>Carpenter building wooden frame house near the forest. Man holding large plank, on his shoulder,
+                    dressed in
+                    work clothes and helmet. Concept of modern, sustainable construction.</p>
+
+            </div>
+            <div class="col">
+                <img src="6.jpg" alt="" height="500px" width="400px">
+                <h2> Description</h2>
+                <p>Carpenter building wooden frame house near the forest. Man holding large plank, on his shoulder,
+                    dressed in
+                    work clothes and helmet. Concept of modern, sustainable construction.</p>
+
+            </div>
+        </div>
+    </div>
+    <div id="form">
+        <form action="" method="post" enctype="text/plain">
+            <h1>CONTACT US..</h1>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name">
+
+            <label for="mail">E-mail:</label>
+            <input type="text" id="mail" name="mail">
+
+            <label for="comment">Contact Number:</label>
+            <input type="text" id="Contact" name="Contact" size="50">
+
+            <input type="submit" value="Send">
+            <input type="reset" value="Reset">
+        </form>
+    </div>
+</body>
+
+</html>
